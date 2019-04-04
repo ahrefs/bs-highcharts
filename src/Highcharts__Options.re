@@ -1,6 +1,3 @@
-type t;
-[@bs.module] external default: t = "highcharts";
-
 module Series = {
   type t;
   /** Creates a `line` series */
