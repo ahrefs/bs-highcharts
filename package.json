@@ -1,6 +1,6 @@
 {
   "name": "@ahrefs/bs-highcharts",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Bucklescript bindings for Highcharts",
   "homepage": "https://github.com/ahrefs/bs-highcharts",
   "repository": {
