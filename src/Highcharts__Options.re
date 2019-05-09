@@ -9,7 +9,22 @@ module Chart = {
   type t;
   /** Creates a Chart.t value */
   [@bs.obj]
-  external make: (~margin: (int, int, int, int)=?, unit) => t = "";
+  external make:
+    (
+      ~margin: (int, int, int, int)=?,
+      ~marginTop: int=?,
+      ~marginRight: int=?,
+      ~marginBottom: int=?,
+      ~marginLeft: int=?,
+      ~spacing: (int, int, int, int)=?,
+      ~spacingTop: int=?,
+      ~spacingRight: int=?,
+      ~spacingBottom: int=?,
+      ~spacingLeft: int=?,
+      unit
+    ) =>
+    t =
+    "";
 };
 
 module Boost = {
@@ -75,6 +90,16 @@ module AxisLabel = {
       ~x: int=?,
       ~y: int=?,
       ~format: string=?,
+      ~formatter: [@bs.this] (
+                    {
+                      .
+                      "value": float,
+                      "isFirst": bool,
+                      "isLast": bool,
+                    } =>
+                    string
+                  )
+                    =?,
       unit
     ) =>
     t =
@@ -101,8 +126,6 @@ module Axis = {
       ~tickWidth: int=?,
       ~tickLength: int=?,
       ~showLastLabel: bool=?,
-      ~min: int=?,
-      ~max: int=?,
       ~reversed: bool=?,
       unit
     ) =>
@@ -132,26 +155,33 @@ module ColorAxis = {
 module Credits = {
   type t;
 
-    /** Creates a Credits.t value */
+  /** Creates a Credits.t value */
   [@bs.obj]
-  external make:
-    (
-      ~enabled: bool=?,
-      unit
-    ) =>
-    t =
-    "";
+  external make: (~enabled: bool=?, unit) => t = "";
+};
 
-}
+module Exporting = {
+  type t;
+
+  /** Creates an Exporting.t value */
+  [@bs.obj]
+  external make: (~enabled: bool=?, unit) => t = "";
+};
 
 [@bs.deriving {abstract: light}]
 type make = {
   [@bs.optional]
-  data: Data.t,
-  [@bs.optional]
   boost: Boost.t,
   [@bs.optional]
   chart: Chart.t,
+  [@bs.optional]
+  colorAxis: ColorAxis.t,
+  [@bs.optional]
+  credits: Credits.t,
+  [@bs.optional]
+  data: Data.t,
+  [@bs.optional]
+  exporting: Exporting.t,
   [@bs.optional]
   series: array(Series.t),
   [@bs.optional]
@@ -162,8 +192,4 @@ type make = {
   xAxis: Axis.t,
   [@bs.optional]
   yAxis: Axis.t,
-  [@bs.optional]
-  colorAxis: ColorAxis.t,
-  [@bs.optional]
-  credits: Credits.t,
 };
