@@ -1,6 +1,6 @@
 {
   "name": "@ahrefs/bs-highcharts",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Bucklescript bindings for Highcharts",
   "homepage": "https://github.com/ahrefs/bs-highcharts",
   "repository": {
@@ -10,7 +10,7 @@
   "bugs": {
     "url": "https://github.com/ahrefs/bs-highcharts/issues"
   },
-  "author": "javier.chavarri@gmail.com",
+  "author": "ahrefs",
   "license": "MIT",
   "keywords": [
     "react",
