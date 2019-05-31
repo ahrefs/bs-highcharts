@@ -79,6 +79,7 @@ module Series = {
       ~boostThreshold: int=?,
       ~borderWidth: int=?,
       ~colsize: int=?,
+      ~data: array(array('a))=?,
       ~nullColor: string=?,
       ~turboThreshold: float=?,
       unit
