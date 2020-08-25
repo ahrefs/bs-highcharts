@@ -8,6 +8,6 @@ bs-platform@^5.0.0:
   integrity sha512-zxLobdIaf/r7go47hOgxcd6C0ANh7MYMEtZNb9Al7JdoekzFZI50F4GpZpP8kMh9Z+M5PoPE1WuryT4S8mT8Kg==
 
 highcharts@^7.0.0:
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/highcharts/-/highcharts-7.1.0.tgz#24dfc9ecba0aa4da18f45759084deb0ad6c7cd20"
-  integrity sha512-pqlnOhH0/+j1KLEP8GQaHiS4VgMUDyyfuACRNRoAsfyyCaV+bL618JLKp5Wi4f2h7qRgT7S03NQYbR1ixKbw0A==
+  version "7.2.2"
+  resolved "https://registry.yarnpkg.com/highcharts/-/highcharts-7.2.2.tgz#94d6bae545d7f0fbf49615b28640f5fdbf99d11e"
+  integrity sha512-jRKujQuPKHLgGQd2sByBI9K5m56CInm2augVZnBYqdmyoU88hcI62uuAXHvxC3FW8YY0FJ74A1uw6sxrcmcmvg==
